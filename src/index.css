@@ -1,0 +1,257 @@
+:root {
+  font-family: Inter, "Segoe UI", Roboto, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #12304a;
+  background: #f3f8ff;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(26, 125, 200, 0.4);
+  outline-offset: 2px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+.hms-setup-page {
+  min-height: calc(100vh - 76px);
+  padding: 36px 24px 52px;
+  background: linear-gradient(180deg, #f3f8ff 0%, #eefaf8 100%);
+  color: #12304a;
+}
+
+.hms-setup-header,
+.hms-setup-card {
+  width: min(100%, 920px);
+  margin-inline: auto;
+}
+
+.hms-setup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.hms-setup-eyebrow {
+  margin: 0 0 8px;
+  color: #1ca5a5;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hms-setup-title {
+  margin: 0;
+  color: #0f2c43;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.hms-setup-description {
+  margin: 8px 0 0;
+  color: #627c91;
+}
+
+.hms-setup-back {
+  flex: 0 0 auto;
+  border: 1px solid #d5e2ed;
+  border-radius: 999px;
+  padding: 11px 16px;
+  background: #fff;
+  color: #173c5a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hms-setup-card {
+  padding: clamp(20px, 4vw, 32px);
+  border: 1px solid rgba(17, 61, 96, 0.06);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(18, 48, 74, 0.08);
+}
+
+.hms-setup-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hms-setup-field {
+  display: grid;
+  gap: 8px;
+  color: #49647d;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hms-setup-field-wide {
+  grid-column: 1 / -1;
+}
+
+.hms-setup-field input,
+.hms-setup-field select,
+.hms-setup-field textarea {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #d8e3ef;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #f9fbff;
+  color: #153758;
+}
+
+.hms-setup-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.hms-setup-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.hms-setup-button {
+  min-height: 46px;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #1a7dc8 0%, #18a0b5 100%);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.hms-setup-button-secondary {
+  border: 1px solid #d4dfea;
+  background: #fff;
+  color: #173c5a;
+}
+
+.hms-setup-alert {
+  margin: 0 0 18px;
+  border: 1px solid #bfeee0;
+  border-radius: 12px;
+  padding: 13px 16px;
+  background: #eafaf5;
+  color: #0d7b62;
+  font-weight: 600;
+}
+
+.hms-setup-alert-error {
+  border-color: #f6d4d1;
+  background: #fff1f0;
+  color: #bb3d3d;
+}
+
+.hms-setup-help {
+  margin: 16px 0 0;
+  color: #627c91;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  #root > nav {
+    padding: 14px 16px !important;
+  }
+
+  #root > nav > div {
+    justify-content: center !important;
+  }
+
+  #root > nav > div > div:last-child {
+    justify-content: center;
+  }
+
+  .hms-responsive-page {
+    padding: 24px 16px 32px !important;
+  }
+
+  .hms-form-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .hms-dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .hms-dashboard-appointment {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .hms-setup-page {
+    padding: 24px 16px 32px;
+  }
+
+  .hms-setup-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hms-setup-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hms-setup-field-wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .hms-form-shell,
+  .hms-dashboard-content {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hms-dashboard-stats,
+  .hms-dashboard-appointment {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
